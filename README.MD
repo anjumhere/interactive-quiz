@@ -6,7 +6,7 @@
 
 A modern, beginner-friendly quiz application built with vanilla HTML, CSS, and JavaScript. Perfect for learning web development fundamentals!
 
-![Quiz App Screenshot](https://via.placeholder.com/800x400/1e2746/a78bfa?text=Interactive+Quiz+App)
+![Quiz App Screenshot](<img src="/images/Screenshot.png" alt="screenshot">)
 
 ---
 
@@ -100,18 +100,20 @@ This project is designed for **beginners** who want to learn web development. He
 
 ## 📁 Project Structure
 
-```
-interactive-quiz/
+quiz-app/
 │
-├── index.html          # Main HTML file (structure)
-├── style.css           # CSS file (styling)
-├── app.js              # JavaScript file (logic)
-├── README.md           # Project documentation
-├── TUTORIAL.md         # Detailed learning guide
+├── index.html # Main HTML file (structure of the app)
+├── style.css # Styles for the app
+├── app.js # Main JavaScript logic
 │
-└── questions/
-    └── questions.js    # Question bank (100 questions)
-```
+├── images/ # All images used in the app
+│ └── ... # e.g., logo.png, icons, backgrounds
+│
+├── questions/ # Question data
+│ └── questions.js # Array of quiz questions
+│
+└── tutorial/ # Optional: tutorials, guides, or assets
+└── ...
 
 ### File Descriptions
 
@@ -437,6 +439,10 @@ copies or substantial portions of the Software.
 
 <p align="center">
   Made with ❤️ for beginners learning web development
+</p>
+
+<p align="center">
+  Author : Adnan Anjum
 </p>
 
 <p align="center">
