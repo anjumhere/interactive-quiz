@@ -3,62 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz app</title>
+    <title>Quizzy - Test Your Knowledge</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Main Quiz Container -->
     <div class="container">
       <header class="quiz-header">
-        <h1>Quiz App</h1>
-        <p class="progress" id="progress">3/10</p>
+        <h1>Quizzy</h1>
+        <p class="progress" id="progress">1/10</p>
       </header>
 
       <section class="quiz-body">
-        <h2 class="question">What is the answer of this question</h2>
-        <ul class="options" id="options">
-          <!-- <li class="option"  data-index="0">
-                <span>A.</span>
-                Option One
-            </li>
-            <li class="option" data-index="1" >
-                <span>B.</span>
-                Option Two
-            </li>
-            <li class="option" data-index="2" >
-                <span>C.</span>
-                Option Three
-            </li>
-            <li class="option" data-index="3" >
-                <span>D.</span>
-                Option Four
-            </li> -->
-        </ul>
+        <h2 class="question">Loading question...</h2>
+        <ul class="options" id="options"></ul>
       </section>
+
       <div class="buttons">
         <button class="next-btn" id="skip-btn">Skip</button>
-        <button class="next-btn" id="next-btn">Next</button>
+        <button class="next-btn" id="next-btn" disabled>Next</button>
       </div>
     </div>
+
+    <!-- Result Screen -->
     <div class="show-result">
-      <h2 style="font-size: 1.5rem; margin-bottom: 20px; color: #a78bfa">
-        Quiz Complete!
-      </h2>
-      <p
-        style="
-          font-size: 3rem;
-          font-weight: bold;
-          color: #fff;
-          margin-bottom: 10px;
-        "
-        id="resultp"
-      >
-        5%
-      </p>
-      <p style="color: #94a3b8; margin-bottom: 20px" id="resultn">
-        You got 5/20 questions correct!
-      </p>
-      <button class="restartButton">restart</button>
+      <h2 class="result-title">Quiz Complete!</h2>
+      <p class="result-percentage" id="resultp">0%</p>
+      <p class="result-text" id="resultn">You got 0/10 questions correct!</p>
+      <button class="restartButton">Restart Quiz</button>
     </div>
+
     <script src="questions/questions.js"></script>
     <script src="app.js"></script>
   </body>
