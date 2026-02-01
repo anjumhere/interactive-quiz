@@ -443,3 +443,4 @@ copies or substantial portions of the Software.
   <a href="https://anjumhere.github.io/interactive-quiz/">Live Demo</a> •
   <a href="https://github.com/anjumhere/interactive-quiz">GitHub Repo</a>
 </p>
+## Author : Adnan Anjum 
