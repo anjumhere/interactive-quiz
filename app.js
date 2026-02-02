@@ -37,7 +37,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 let selectedAnswer = null;
 const TOTAL_QUESTIONS = 10;
-
+clearInterval();
 // ============================================
 // SHUFFLE AND SELECT QUESTIONS
 // ============================================
@@ -77,8 +77,39 @@ function loadQuestion() {
     });
     list.appendChild(li);
   });
+  startTimer();
 }
 
+// ============================================
+//  Timer
+// ============================================
+let time = 20; // you can change this if you want different durations
+let timerId = null; // keep track of the current interval
+
+function startTimer() {
+  // ←←← THIS IS THE IMPORTANT LINE
+  if (timerId !== null) clearInterval(timerId);
+
+  // reset + show the starting value immediately
+  time = 20;
+  document.getElementById("timer").innerText = time;
+
+  timerId = setInterval(() => {
+    time--; // decrement first
+
+    if (time > 0) {
+      document.getElementById("timer").innerText = time;
+    } else {
+      // time is now 0
+      document.getElementById("timer").innerText = "Time Up!";
+      clearInterval(timerId);
+      timerId = null;
+
+      nextQuestion(); // go to next question
+      startTimer(); // ←←← automatically start timer for the new question
+    }
+  }, 1000);
+}
 // ============================================
 // SELECT OPTION
 // ============================================

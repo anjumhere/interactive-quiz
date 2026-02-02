@@ -358,14 +358,15 @@ Contributions are welcome! Here's how:
 
 ### Ideas for Contributions
 
-- [ ] Add more questions
-- [ ] Add a timer feature
+- [✅] Add more questions
+- [✅] Add a timer feature
 - [ ] Add difficulty levels
 - [ ] Add sound effects
 - [ ] Add category selection
 - [ ] Add high score storage (localStorage)
 - [ ] Add animations
 - [ ] Improve accessibility
+- [ ] Fetch questions from an API
 
 ---
 
