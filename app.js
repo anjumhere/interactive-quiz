@@ -30,13 +30,26 @@ let resultp = document.getElementById("resultp");
 let resultn = document.getElementById("resultn");
 let restartBtn = document.querySelector(".restartButton");
 
+const correctSound = new Audio("sounds/correct.mp3");
+const wrongSound = new Audio("sounds/wrong.m4a");
+
+function playCorrect() {
+  const sound = correctSound.cloneNode(); // clone to avoid overlap issues
+  sound.play();
+}
+
+function playWrong() {
+  const sound = wrongSound.cloneNode();
+  sound.play();
+}
+
 // ============================================
 // QUIZ STATE
 // ============================================
 let currentQuestionIndex = 0;
 let score = 0;
 let selectedAnswer = null;
-const TOTAL_QUESTIONS = 10;
+const TOTAL_QUESTIONS = 20;
 clearInterval();
 // ============================================
 // SHUFFLE AND SELECT QUESTIONS
@@ -131,7 +144,9 @@ function selectOption(index) {
   if (selectedAnswer === currentQuestion.correct) {
     score++;
     allOptions[selectedAnswer].classList.add("correct");
+    playCorrect();
   } else {
+    playWrong();
     allOptions[selectedAnswer].classList.add("wrong");
     allOptions[currentQuestion.correct].classList.add("correct");
   }

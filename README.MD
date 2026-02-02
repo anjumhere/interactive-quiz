@@ -361,7 +361,7 @@ Contributions are welcome! Here's how:
 - [✅] Add more questions
 - [✅] Add a timer feature
 - [ ] Add difficulty levels
-- [ ] Add sound effects
+      [✅] Add sound effects
 - [ ] Add category selection
 - [ ] Add high score storage (localStorage)
 - [ ] Add animations
